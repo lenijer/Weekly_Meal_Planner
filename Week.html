@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+	<link rel="stylesheet" type="text/css" href="Week.css" />
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th class="Weekday Monday">
+					Monday
+				</th>
+				<th class="Weekday Tuesday">
+					Tuesday
+				</th>
+				<th class="Weekday Wednesday">
+					Wednesday
+				</th>				
+				<th class="Weekday Thursday">
+					Thursday
+				</th>
+				<th class="Weekday Friday">
+					Friday
+				</th>
+				<th class="Weekday Saturday">
+					Saturday
+				</th>
+				<th class="Weekday Sunday">
+					Sunday
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<script>
+				function Enlarge(o){
+					o.classList.add("Large");
+				}
+				function AlterSize(){
+					const weekdays = document.querySelectorAll(".Weekday");
+					large = false;
+					if (event.target.classList.contains("Large")){
+						large = true;
+					}
+					weekdays.forEach (weekday => { weekday.classList.remove("Large"); });
+					if (!large){
+						Enlarge(event.target);
+					}
+				}
+			</script>
+			<tr>
+				<th class="Weekday Monday" OnClick='AlterSize()'>
+					<div class="date">
+						1.
+					</div>
+				</th>
+				<th class="Weekday Tuesday" OnClick='AlterSize()'>
+					<div class="date">
+						2.
+					</div>
+				</th>
+				<th class="Weekday Wednesday" OnClick='AlterSize()'>
+					<div class="date">
+						3.
+					</div>
+				</th>					
+				<th class="Weekday Thursday" OnClick='AlterSize()'>
+					<div class="date">
+						4.
+					</div>
+				</th>
+				<th class="Weekday Friday" OnClick='AlterSize()'>
+					<div class="date">
+						5.
+					</div>
+				</th>
+				<th class="Weekday Saturday" OnClick='AlterSize()'>
+					<div class="date">
+						6.
+					</div>
+				</th>
+				<th class="Weekday Sunday" OnClick='AlterSize()'>
+					<div class="date">
+						7.
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th class="Weekday Monday" OnClick='AlterSize()'>
+					<div class="date">
+						8.
+					</div>
+				</th>
+				<th class="Weekday Tuesday" OnClick='AlterSize()'>
+					<div class="date">
+						9.
+					</div>
+				</th>
+				<th class="Weekday Wednesday" OnClick='AlterSize()'>
+					<div class="date">
+						10.
+					</div>
+				</th>				
+				<th class="Weekday Thursday" OnClick='AlterSize()'>
+					<div class="date">
+						11.
+					</div>
+				</th>
+				<th class="Weekday Friday" OnClick='AlterSize()'>
+					<div class="date">
+						12.
+					</div>
+				</th>
+				<th class="Weekday Saturday" OnClick='AlterSize()'>
+					<div class="date">
+						13.
+					</div>
+				</th>
+				<th class="Weekday Sunday" OnClick='AlterSize()'>
+					<div class="date">
+						14.
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th class="Weekday Monday" OnClick='AlterSize()'>
+					<div class="date">
+						15.
+					</div>
+				</th>
+				<th class="Weekday Tuesday" OnClick='AlterSize()'>
+					<div class="date">
+						16.
+					</div>
+				</th>
+				<th class="Weekday Wednesday" OnClick='AlterSize()'>
+					<div class="date">
+						17.
+					</div>
+				</th>				
+				<th class="Weekday Thursday" OnClick='AlterSize()'>
+					<div class="date">
+						18.
+					</div>
+				</th>
+				<th class="Weekday Friday" OnClick='AlterSize()'>
+					<div class="date">
+						19.
+					</div>
+				</th>
+				<th class="Weekday Saturday" OnClick='AlterSize()'>
+					<div class="date">
+						20.
+					</div>
+				</th>
+				<th class="Weekday Sunday" OnClick='AlterSize()'>
+					<div class="date">
+						21.
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th class="Weekday Monday" OnClick='AlterSize()'>
+					<div class="date">
+						22.
+					</div>
+				</th>
+				<th class="Weekday Tuesday" OnClick='AlterSize()'>
+					<div class="date">
+						23.
+					</div>
+				</th>
+				<th class="Weekday Wednesday" OnClick='AlterSize()'>
+					<div class="date">
+						24.
+					</div>
+				</th>				
+				<th class="Weekday Thursday" OnClick='AlterSize()'>
+					<div class="date">
+						25.
+					</div>
+				</th>
+				<th class="Weekday Friday" OnClick='AlterSize()'>
+					<div class="date">
+						26.
+					</div>
+				</th>
+				<th class="Weekday Saturday" OnClick='AlterSize()'>
+					<div class="date">
+						27.
+					</div>
+				</th>
+				<th class="Weekday Sunday" OnClick='AlterSize()'>
+					<div class="date">
+						28.
+					</div>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+</body>
