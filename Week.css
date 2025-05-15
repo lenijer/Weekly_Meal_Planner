@@ -33,10 +33,18 @@ tbody .Weekday{
 	align-self: stretch;
 }
 
+tbody .Weekday .Ingredients{
+	display: none;
+}
+
 tbody .Weekday.Large{
 	flex: 200px;
 	border-radius: 0%;
 	height: 400px;
+}
+
+tbody .Weekday.Large .Ingredients{
+	display: block;
 }
 
 tbody .Weekday:hover{
