@@ -2,65 +2,30 @@
 <html lang = "en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" type="text/css" href="Week.css" />
+	<script src="HardcodeImport.js" type="text/javascript" defer></script>
+	
+	<title>Meal Planner</title>
 </head>
 <body>
 	<script>
-		class Meal {
-			Dish = "";
-			Category = "";
-			Book = "";
-			Porion = "";
-			Ingreedients;
-		}
 		const Meals = new Array();
 		
 		document.addEventListener("DOMContentLoaded", function() { 
-			one = new Meal();
-			one.Dish = "Gullgryte";
-			one.Category = "Vegetar";
-			one.Book = "Bare Bra Barnemat s.121";
-			one.Portion = "2 voksne 2 barn";
-			one.Ingreedients = "<li>1 stk Søtpotet</li>" +
-				"<li>1 stk Gul Løk</li>" +
-				"<li>3 fedd Hvitløk</li>" +
-				"<li>1 stk Squash</li>" +
-				"<li>4 stk Potet</li>" +
-				"<li>2 stk Gulrot</li>" +
-				"<li>2 dl Speltperler/Byggryn</li>" +
-				"<li>1 pk Ferdigkokte Kikerter</li>" +
-				"<li>1/2 ss Gurkemeiepulver</li>" +
-				"<li>1 ss Currypulver</li>" +
-				"<li>7 dl Melk</li>" +
-				"<li>1 dl Fløte/Kokkosmelk</li>" +
-				"<li>4 blader Grønnkål(NB: Kun barn over 12mnd)</li>";
-			
-			Meals.push(one);
-			
-			one = new Meal();
-			one.Dish = "Rask Gnocchiform med brokkoli, ost og pesto";
-			one.Category = "Vegetar";
-			one.Book = "En Skikkelig Digg kokebok s.70";
-			one.Portion = "4 porsjoner";
-			one.Ingreedients = "<li>1 ts Salt</li>" +
-				"<li>1 bukett Brokoli</li>" +
-				"<li>2 stk Gulrøtter</li>" +
-				"<li>500 g Fersk Potetgnocchi</li>" +
-				"<li>230 g Hvite Bønner</li>" +
-				"<li>800 g Tomatsaus</li>" +
-				"<li>3 1/2 dl Valgfri Ost</li>";
-			
-			Meals.push(one);
-			
-			WriteTo(1);
+			HardData();
+			for (let i = 1; i < 3 + 1; i++){
+				WriteTo(Math.floor(Math.random() * Meals.length), i);
+			}
         });
 		
-		function WriteTo(i){
-			document.getElementById("Meal_Name").innerHTML = Meals[i].Dish;
-			document.getElementById("Meal_Category").innerHTML = Meals[i].Category;
-			document.getElementById("Meal_Book").innerHTML = Meals[i].Book;
-			document.getElementById("Meal_Portion").innerHTML = Meals[i].Portion;
-			document.getElementById("Meal_Ingreedients_List").innerHTML = Meals[i].Ingreedients;
+		function WriteTo(i, a){
+			document.getElementById("Meal_Name" + a).innerHTML = Meals[i].Dish;
+			document.getElementById("Meal_Category" + a).innerHTML = Meals[i].Category;
+			document.getElementById("Meal_Book" + a).innerHTML = Meals[i].Book;
+			document.getElementById("Meal_Portion" + a).innerHTML = Meals[i].Portion;
+			document.getElementById("Meal_Ingreedients_List" + a).innerHTML = Meals[i].Ingreedients;
 		}
 	</script>
 	<table>
@@ -108,41 +73,34 @@
 			</script>
 			<tr>
 				<th class="Weekday Monday" OnClick='AlterSize()'>
-					<p style="pointer-events: none;">Gullgryte</p>
-					<p style="pointer-events: none;">Vegetar</p>
-					<p style="pointer-events: none;">Bare Bra Barnemat s.121</p>
-					<p style="pointer-events: none;">2 voksne 2 barn</p>
-					<ul class="Ingredients" style="pointer-events: none;">
-						<li>1 stk Søtpotet</li>
-						<li>1 stk Gul Løk</li>
-						<li>3 fedd Hvitløk</li>
-						<li>1 stk Squash</li>
-						<li>4 stk Potet</li>
-						<li>2 stk Gulrot</li>
-						<li>2 dl Speltperler/Byggryn</li>
-						<li>1 pk Ferdigkokte Kikerter</li>
-						<li>1/2 ss Gurkemeiepulver</li>
-						<li>1 ss Currypulver</li>
-						<li>7 dl Melk</li>
-						<li>1 dl Fløte/Kokkosmelk</li>
-						<li>4 blader Grønnkål(NB: Kun barn over 12mnd)</li>
+					<p id="Meal_Name1" style="pointer-events: none;"></p>
+					<p id="Meal_Category1" style="pointer-events: none;"></p>
+					<p id="Meal_Book1"></p>
+					<p id="Meal_Portion1" style="pointer-events: none;"></p>
+					<ul id="Meal_Ingreedients_List1" class="Ingredients" style="pointer-events: none;">
 					</ul>
 					<div class="date">
 						1.
 					</div>
 				</th>
 				<th class="Weekday Tuesday" OnClick='AlterSize()'>
-					<p id="Meal_Name" style="pointer-events: none;"></p>
-					<p id="Meal_Category" style="pointer-events: none;"></p>
-					<p id="Meal_Book" style="pointer-events: none;"></p>
-					<p id="Meal_Portion" style="pointer-events: none;"></p>
-					<ul id="Meal_Ingreedients_List" class="Ingredients" style="pointer-events: none;">
+					<p id="Meal_Name2" style="pointer-events: none;"></p>
+					<p id="Meal_Category2" style="pointer-events: none;"></p>
+					<p id="Meal_Book2"></p>
+					<p id="Meal_Portion2" style="pointer-events: none;"></p>
+					<ul id="Meal_Ingreedients_List2" class="Ingredients" style="pointer-events: none;">
 					</ul>
 					<div class="date">
 						2.
 					</div>
 				</th>
 				<th class="Weekday Wednesday" OnClick='AlterSize()'>
+					<p id="Meal_Name3" style="pointer-events: none;"></p>
+					<p id="Meal_Category3" style="pointer-events: none;"></p>
+					<p id="Meal_Book3"></p>
+					<p id="Meal_Portion3" style="pointer-events: none;"></p>
+					<ul id="Meal_Ingreedients_List3" class="Ingredients" style="pointer-events: none;">
+					</ul>
 					<div class="date">
 						3.
 					</div>
